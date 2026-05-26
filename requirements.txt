@@ -1,4 +1,5 @@
 streamlit==1.45.1
+streamlit-webrtc
 tf-nightly
 numpy
 pillow
@@ -6,3 +7,4 @@ huggingface_hub
 h5py
 protobuf>=3.20,<7
 opencv-python-headless
+av
