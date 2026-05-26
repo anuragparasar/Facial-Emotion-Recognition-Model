@@ -10,11 +10,10 @@ from tensorflow.keras.models import load_model
 
 model_path = hf_hub_download(
     repo_id="Anurag04/Fer_model",
-    filename="fer_68_model.keras"
+    filename="fer_model.h5"
 )
 
 model = load_model(model_path, compile=False)
-
 st.title("FACIAL EMOTION RECOGNITION")
 
 class_names = [
