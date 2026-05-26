@@ -4,8 +4,6 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 from PIL import Image
 import cv2
-from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
-import av
 
 from huggingface_hub import hf_hub_download
 from tensorflow.keras.models import load_model
@@ -130,22 +128,3 @@ elif option == "Take Picture":
             st.dataframe(df)
             st.subheader(f"Predicted Emotion: {emotion}")
 
-
-elif option == "Live Webcam":
-
-    class EmotionProcessor(VideoProcessorBase):
-        def recv(self, frame):
-            img = frame.to_ndarray(format="bgr24")
-
-            output_frame, emotion, df = predict_emotion(img)
-
-            return av.VideoFrame.from_ndarray(output_frame, format="bgr24")
-
-    webrtc_streamer(
-        key="emotion-live",
-        video_processor_factory=EmotionProcessor,
-        media_stream_constraints={
-            "video": True,
-            "audio": False
-        }
-    )
