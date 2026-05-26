@@ -13,7 +13,7 @@ model_path = hf_hub_download(
     filename="fer_68_model.keras"
 )
 
-model = load_model(model_path)
+model = load_model(model_path, compile=False)
 
 st.title("FACIAL EMOTION RECOGNITION")
 
