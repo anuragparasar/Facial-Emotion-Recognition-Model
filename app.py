@@ -128,7 +128,7 @@ elif option == "Take Picture":
             st.subheader(f"Predicted Emotion: {emotion}")
 elif option == "Live Webcam":
 
-    class EmotionProcessor(VideoProcessorBase):
+    class EmotionProcessor:
         def recv(self, frame):
             img = frame.to_ndarray(format="bgr24")
 
@@ -138,7 +138,7 @@ elif option == "Live Webcam":
 
     webrtc_streamer(
         key="emotion-live",
-        video_processor_factory=EmotionProcessor,
+        video_frame_callback=EmotionProcessor().recv,
         media_stream_constraints={
             "video": True,
             "audio": False
