@@ -1,5 +1,13 @@
 # Facial-Emotion-Recognition-Model
+## 🧠 Model
 
+The trained `.keras` model is hosted on Hugging Face.
+
+### 📥 Download Model
+
+```txt
+https://huggingface.co/Anurag04/Fer_model/blob/main/fer_model.h5
+```
 ## 🎥 Live Webcam Support
 
 A real-time live webcam version using `streamlit-webrtc` was also implemented locally.
@@ -14,3 +22,4 @@ However, the local version supports:
 The deployed application currently supports:
 - Image Upload
 - Camera Capture
+
