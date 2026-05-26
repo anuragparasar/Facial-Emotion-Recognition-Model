@@ -1,5 +1,5 @@
-streamlit==1.45.1
-streamlit-webrtc==0.47.9
+sstreamlit==1.45.1
+streamlit-webrtc
 tensorflow==2.16.1
 numpy==1.26.4
 pillow==10.4.0
@@ -7,4 +7,4 @@ huggingface_hub==0.32.4
 h5py==3.11.0
 protobuf>=3.20,<7
 opencv-python-headless==4.10.0.84
-av==12.3.0
+av
