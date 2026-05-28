@@ -10,6 +10,7 @@ from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from langchain_core.prompts import PromptTemplate
 import time
 import base64
+import os
 
 load_dotenv()
 hf_token = os.getenv("HF_API_TOKEN")
