@@ -7,3 +7,4 @@ huggingface_hub
 h5py
 protobuf>=3.20,<7
 opencv-python-headless
+langchain
