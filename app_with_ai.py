@@ -12,6 +12,10 @@ import time
 import base64
 
 load_dotenv()
+hf_token = os.getenv("HF_API_TOKEN")
+
+if hf_token is None:
+    hf_token = st.secrets["HF_API_TOKEN"]
 
 def get_base64(file):
     with open(file, "rb") as f:
@@ -61,6 +65,7 @@ st.markdown(
 
 llm = HuggingFaceEndpoint(
     repo_id="deepseek-ai/DeepSeek-V4-Pro",
+    huggingfacehub_api_token=hf_token,
     task="text-generation",
     temperature=0.3
 )
