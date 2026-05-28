@@ -65,7 +65,7 @@ st.markdown(
 )
 
 llm = HuggingFaceEndpoint(
-    repo_id="deepseek-ai/DeepSeek-V4-Pro",
+    repo_id="openbmb/MiniCPM5-1B",
     huggingfacehub_api_token=hf_token,
     task="text-generation",
     temperature=0.3
