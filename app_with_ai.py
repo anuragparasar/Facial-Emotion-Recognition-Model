@@ -22,7 +22,7 @@ def get_base64(file):
     with open(file, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-img = get_base64("background.png")
+img = get_base64("styles/background.png")
 
 st.markdown(
     f"""
